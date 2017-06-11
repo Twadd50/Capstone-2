@@ -15,7 +15,7 @@ public class Answers {
 	}
 	public Long getQuestionId() {
 		return questionId;
-	}
+	}		// should be Long??
 	public void setQuestionId(Long questionId) {
 		this.questionId = questionId;
 	}
@@ -30,10 +30,9 @@ public class Answers {
 	}
 	public void setCorrect(boolean isCorrect) {
 		this.isCorrect = isCorrect;
+	} 
+	 // check
+	public void setAllAnswers(String allAnswers) {
+		this.answerText = allAnswers;
 	}
-
-	
-	
-	
-	
 }

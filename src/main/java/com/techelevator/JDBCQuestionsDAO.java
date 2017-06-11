@@ -16,24 +16,21 @@ public class JDBCQuestionsDAO implements QuestionsDAO {
 	@Override
 	public List<Questions> getAllQuestions() {
 		   List<Questions> allQuestions = new ArrayList<>();
-		
-		   
-		   	//SqlRowSet handles "results" from the = jdbcTemplate
-			//when using "queryForRowSet" method, "mapRow" is needed
-		   	//mapRow is used when each row of the result set corresponds to one object in your list
+	
 		String sqlQuestions = "SELECT * FROM questions";
 		SqlRowSet results   = jdbcTemplate.queryForRowSet(sqlQuestions);
 		while(results.next()) {
 			allQuestions.add(mapRowToQuestions(results));
-			
-		}
+			}
 		return allQuestions;
 	}
+	
 			//sync what data can be accessed and where
 	private Questions mapRowToQuestions(SqlRowSet results) {
 		Questions allQuestions;
 		allQuestions = new Questions();
 		allQuestions.setId(results.getLong("id"));
+		allQuestions.setQuestionText(results.getNString("question_text"));
 			
 		return allQuestions;	
 	}

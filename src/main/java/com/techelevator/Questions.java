@@ -12,13 +12,14 @@ public class Questions {
 		this.id = id;
 	}
 	public String getQuestionText() {
-		return questionText;  /////  
+		return questionText;  
 	}
 	public static String getAllQuestions() {
-		return getAllQuestions();    /////change
+		return getAllQuestions();  
 	}
-	public void setQuestionText(String questionText) {
-		this.questionText = questionText;
+	/////is this right? --(question_text)? setter??
+	public void setQuestionText(String question_Text) {
+		this.questionText = question_Text;
 	}
 	
 }
