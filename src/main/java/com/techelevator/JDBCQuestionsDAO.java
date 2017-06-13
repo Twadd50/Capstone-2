@@ -26,7 +26,7 @@ public class JDBCQuestionsDAO implements QuestionsDAO {
 	}
 	
 			//sync what data can be accessed and where
-	private Questions mapRowToQuestions(SqlRowSet results) {
+	private Questions mapRowToQuestions(SqlRowSet results) {			//mapRow always needs all columns
 		Questions allQuestions;
 		allQuestions = new Questions();
 		allQuestions.setId(results.getLong("id"));
@@ -34,6 +34,28 @@ public class JDBCQuestionsDAO implements QuestionsDAO {
 			
 		return allQuestions;	
 	}
+//	@Override
+//	public List<Questions> getQuestionText() {
+//		   List<Questions> allQuestions = new ArrayList<>();
+//		
+//			String sqlGetQuestionText = "SELECT question_text FROM questions";
+//			SqlRowSet results   = jdbcTemplate.queryForRowSet(sqlGetQuestionText);
+//			while(results.next()) {
+//				allQuestions.add(mapRowToQuestions(results));
+//				}
+//			return allQuestions;
+//		}
+//	@Override
+//	public List<Questions> getId() {
+//		   List<Questions> allQuestions = new ArrayList<>();
+//			
+//				String sqlGetId = "SELECT id FROM questions";
+//				SqlRowSet results   = jdbcTemplate.queryForRowSet(sqlGetId);
+//				while(results.next()) {
+//					allQuestions.add(mapRowToQuestions(results));
+//					}
+//				return allQuestions;
+//	}
 }
 
 

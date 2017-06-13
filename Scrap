@@ -1,0 +1,19 @@
+Working on												Done 
+----------------------------------------------------------------------------------------------------------------------------
+CLI clean up	
+finish "View Scores" section									
+Problem solving in  CLI													
+JDBC tests 	
+"Main" program not compiling?
+Add exceptions?						
+												
+		
+													JDBC AnswersDAO
+													JDBC QuestionsDAO
+													JDBC ResultsDAO
+													DAO Answers
+													DAO Questions
+													DAO Results
+													Answers.java
+													questions.java
+													results.java

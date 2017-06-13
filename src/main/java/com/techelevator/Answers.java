@@ -1,5 +1,5 @@
 package com.techelevator;
-
+//POJO reference
 public class Answers {
 	
 	private Long    answerId;

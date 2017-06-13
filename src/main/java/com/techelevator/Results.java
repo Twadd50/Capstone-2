@@ -1,5 +1,5 @@
 package com.techelevator;
-
+//POJO reference, interacts with
 public class Results {
 
 		private Long    id;
@@ -31,6 +31,7 @@ public class Results {
 		public void setCorrectQuestions(Long correctQuestions) {
 			this.correctQuestions = correctQuestions;
 		}
+		
 		
 		
 		
